@@ -22,6 +22,7 @@ public class JoystickToEvents : MonoBehaviour
 
         if(speed > 0.01f) // dead zone
         {
+            // 計算出目前角色轉向到 Joystick 的方向需要轉幾度.
             var rootDirection = root.forward;
             var axis = Vector3.Cross(rootDirection, moveDirection);
 //            direction = Vector3.Angle(rootDirection, moveDirection) / 180.0f * (axis.y < 0 ? -1 : 1);
